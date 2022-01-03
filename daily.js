@@ -25,26 +25,21 @@ Both pawns will start at the same horizontal position.
 
 function redKnight(N, P) {
   //with each turn the pieces should move positions 
-  let endLoop = 0;
   // continue until the knight catches a pawn
   let pawnCaught = false;
   let redKnight = [N, 0]; // vertical position, horizontal position
 
-  console.log('before loop');
-  while (pawnCaught !== true && endLoop !== 100) {
-   console.log(endLoop);
+  while (pawnCaught !== true) {
    P++;
-   redKnight[0] === 1 ? 0 : 1; // if @ position 1 change to 0 otherwise go to position 1
-   redKnight[1] =+ 2; //add two to horizontal position
+   redKnight[0] = redKnight[0] === 1 ? 0 : 1; // if @ position 1 change to 0 otherwise go to position 1
+   redKnight[1] += 2; //add two to horizontal position
    if (redKnight[1] === P) pawnCaught = true;
-   endLoop++;
   };
 
   let pawnColor = redKnight[0] === 1 ? "Black" : "White";
-  
-  console.log(`redKnight is ${redKnight}`);
-  console.log(`p is ${P}`);
-  return [pawnColor, P];
+    return [pawnColor, P];
 };
 
 console.log(redKnight(0, 8)); // should return ['White', 16]
+console.log(redKnight(0, 7)); // should return ['Black', 14]
+console.log(redKnight(1, 6)); // should return ['Black', 12]
