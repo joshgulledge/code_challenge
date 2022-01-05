@@ -40,6 +40,14 @@ function redKnight(N, P) {
     return [pawnColor, P];
 };
 
+function redKnightTwo(N,P) {
+  let pawnColor = (N+P) % 2 ? "Black" : "White";
+  return [pawnColor, P*2];
+}
+
 console.log(redKnight(0, 8)); // should return ['White', 16]
 console.log(redKnight(0, 7)); // should return ['Black', 14]
 console.log(redKnight(1, 6)); // should return ['Black', 12]
+console.log(redKnightTwo(0, 8)); // should return ['White', 16]
+console.log(redKnightTwo(0, 7)); // should return ['Black', 14]
+console.log(redKnightTwo(1, 6)); // should return ['Black', 12]
