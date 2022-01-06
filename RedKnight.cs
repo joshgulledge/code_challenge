@@ -6,23 +6,14 @@ namespace DailyTraining
     {
       static void Main(string[] args)
       {
-          // var answerOne = RedKnight(0, 8); // should return ("white", 16)
-          // Console.WriteLine(answerOne);
-          // var answerTwo = RedKnight(0, 7); // should return ("Black", 14)
-          // Console.WriteLine(answerTwo);
-          // var answerThree = RedKnight(1, 6); // should return ("Black", 12)
-          // Console.WriteLine(answerThree);
-          // var answerFour = RedKnight(1, 5); // should return ("White", 10)
-          // Console.WriteLine(answerFour);
+          string testOne = SolutionClass.EvenOrOdd(2);
+          string testTwo = SolutionClass.EvenOrOdd(7);
+          string testThree = SolutionClass.EvenOrOdd(-42);
+          Console.WriteLine(testOne);
+          Console.WriteLine(testTwo);
+          Console.WriteLine(testThree);
 
-          var answerOne = RedKnightTwo(0, 8); // should return ("white", 16)
-          Console.WriteLine(answerOne);
-          var answerTwo = RedKnightTwo(0, 7); // should return ("Black", 14)
-          Console.WriteLine(answerTwo);
-          var answerThree = RedKnightTwo(1, 6); // should return ("Black", 12)
-          Console.WriteLine(answerThree);
-          var answerFour = RedKnightTwo(1, 5); // should return ("White", 10)
-          Console.WriteLine(answerFour);
+
       }
 
       public static (string color, long position) RedKnight(int knight, long pawn)
