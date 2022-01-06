@@ -1,22 +1,10 @@
-﻿using System;
+using System;
 
 namespace DailyTraining
 {
-    class Program
-    {
-      static void Main(string[] args)
-      {
-          string testOne = SolutionClass.EvenOrOdd(2);
-          string testTwo = SolutionClass.EvenOrOdd(7);
-          string testThree = SolutionClass.EvenOrOdd(-42);
-          Console.WriteLine(testOne);
-          Console.WriteLine(testTwo);
-          Console.WriteLine(testThree);
-
-
-      }
-
-      public static (string color, long position) RedKnight(int knight, long pawn)
+  public class RedKnightClass
+  {
+    public static (string color, long position) RedKnight(int knight, long pawn)
       {
         // Your solution goes here
         int knight_horizontal = 0;
@@ -39,6 +27,6 @@ namespace DailyTraining
         string pawn_color = (((knight + (int)pawn) % 2) == 0) ? "White" : "Black";
         return (pawn_color, pawn*2);
       }
-
-    }
+    
+  }
 }
