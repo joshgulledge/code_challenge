@@ -5,15 +5,10 @@ There will always be only one integer that appears an odd number of times.
 */
 
 function findOdd(A) {
-  //track the number of times the int appears
   let count = 0;
-  // loop through and count the instances of the int
   for (let i = 0; i < A.length; i++) {
-    //console.log(`First loop at ${A[i]}`);
      for (let x = 0; x < A.length; x++) {
-      //console.log(`Second loop at ${A[x]}`);
       if (A[i] == A[x]) {
-        //console.log(`Match Found`);
         count++;
       };
     };
