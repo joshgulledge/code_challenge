@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 
 namespace DailyTraining
 {
@@ -6,11 +8,29 @@ namespace DailyTraining
     {
       static void Main(string[] args)
       {
-        string testOne = ReverseString.Solution("Hello");
+        var gunnersOne = new Dictionary<string, string>
+          {
+            {"Mike", "aye"},
+            {"Joe", "aye"},
+            {"Johnson", "aye"},
+            {"Peter", "aye"}
+          };
+
+          var gunnersTwo = new Dictionary<string, string>
+          {
+            {"Mike", "aye"},
+            {"Joe", "nay"},
+            {"Johnson", "aye"},
+            {"Peter", "aye"}
+          };
+
+        string testOne = PirateCannon.CannonsReady(gunnersOne);
         Console.WriteLine(testOne);
 
-        string testTwo = ReverseString.Solution("World");
+        string testTwo = PirateCannon.CannonsReady(gunnersTwo);
         Console.WriteLine(testTwo);
+
+        
       }      
 
     }
