@@ -8,30 +8,26 @@ namespace DailyTraining
     {
       static void Main(string[] args)
       {
-        var gunnersOne = new Dictionary<string, string>
-          {
-            {"Mike", "aye"},
-            {"Joe", "aye"},
-            {"Johnson", "aye"},
-            {"Peter", "aye"}
-          };
 
-          var gunnersTwo = new Dictionary<string, string>
-          {
-            {"Mike", "aye"},
-            {"Joe", "nay"},
-            {"Johnson", "aye"},
-            {"Peter", "aye"}
-          };
+        var testOne = Wave.DoTheWave("hello");
+        foreach (var word in testOne)
+        {
+          Console.WriteLine(word);
+        }
 
-        string testOne = PirateCannon.CannonsReady(gunnersOne);
-        Console.WriteLine(testOne);
+        var testTwo = Wave.DoTheWave("codewars");
+        foreach (var word in testTwo)
+        {
+          Console.WriteLine(word);
+        }
 
-        string testTwo = PirateCannon.CannonsReady(gunnersTwo);
-        Console.WriteLine(testTwo);
-
-        
+        var testThree = Wave.DoTheWave("two words");
+        foreach (var word in testThree)
+        {
+          Console.WriteLine(word);
+        }
       }      
 
     }
 }
+
