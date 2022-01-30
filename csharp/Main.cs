@@ -9,23 +9,15 @@ namespace DailyTraining
       static void Main(string[] args)
       {
 
-        var testOne = Wave.DoTheWave("hello");
-        foreach (var word in testOne)
-        {
-          Console.WriteLine(word);
-        }
+        var testOne = YourOrder.Order("is2 Thi1s T4est 3a");
+        Console.WriteLine(testOne);
 
-        var testTwo = Wave.DoTheWave("codewars");
-        foreach (var word in testTwo)
-        {
-          Console.WriteLine(word);
-        }
+        var testTwo = YourOrder.Order("4of Fo1r pe6ople g3ood th5e the2");
+        Console.WriteLine(testTwo);
 
-        var testThree = Wave.DoTheWave("two words");
-        foreach (var word in testThree)
-        {
-          Console.WriteLine(word);
-        }
+        var testThree = YourOrder.Order("");
+        Console.WriteLine(testThree);
+
       }      
 
     }
